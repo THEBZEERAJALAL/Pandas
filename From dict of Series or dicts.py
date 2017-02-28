@@ -7,29 +7,28 @@ d={'one':pd.Series([1.,11.,111.,22223,2222]),
 
 
 df=pd.DataFrame(d)
-
+print(df)
 #printing without index
 print(df.to_string(index=False))
 
 
-print(df)
-#
-print("**********************")
+
+
 
 # from item
 
 c=df.from_items([('two', [1, 2, 3])])
-# print(c)
+print(c)
 
 #deleting one column
-# del df['two']
-# print(df)
+del df['two']
+print(df)
 
 # adding one column
 df['five'  ]=df['one']*df['two']
 print(df)
 
-#
+
 # inserting a scalar value
 
 df['four']='foo'
@@ -48,11 +47,8 @@ print(df.loc['a'])
 
 
 # Select row by integer location
-# df.iloc[1]
+ df.iloc[1]
 
 # Slice rows
-print("sssssssssssssssssssssss")
 print(df[2:5])
 
-print("********************************")
-print(df['three'])
